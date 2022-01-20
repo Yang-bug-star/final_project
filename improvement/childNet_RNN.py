@@ -193,7 +193,7 @@ class ChildNet():  #定义
             val_accuracies.append(val_acc)
             print('validation accurancy: {:6.2f}'.format(val_acc))
             #early-stopping
-            if max_val_acc > val_acc:
+            if max_val_acc >= val_acc:
                 patient_count += 1
                 if patient_count == patience:
                     break
